@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     width: 97.55%;
-    background-color: #262626;
+    background-color: #000000;
     color: white;
     padding: 15px;
     text-align: left;
@@ -14,6 +14,21 @@
     font-size: larger;
   }
   
+  .logo {
+    height: 24px;
+  }
+  .shapeshifters {
+    padding: 5px;
+    margin: 5px;
+    margin-top: 20px;
+  }
+
+  .blankspace{  
+    position: sticky;
+    font-family: 'Times New Roman', Times, serif;
+    height: 100px;
+    width: 100%;
+  }
  
   .bordered-text:hover {
     border: 1px solid rgb(23, 1, 1);
@@ -34,16 +49,14 @@ font-family: Arial, sans-serif;
 background-color: white;
 }
 .signupin {
-  background-color: orange;
-  height: 35px;
+  background-color: #ee892f;
+  height: 28px;
   width: 100px;
   border: rgb(252, 176, 35) 2px solid;
-  border-radius: 5px;
   color: white;
   margin: 5px;
   padding: 5px;
-  margin-top: -5px;
-  font-size: 20px;
+  font-size: 16px;
   font-family: 'Times New Roman', Times, serif;
 }
 
@@ -121,6 +134,46 @@ background-color: #e53935;
 }
 
 
+.locations1 {
+  position: sticky;
+  border: white 2px solid;
+  border-radius: 5px;
+  margin: 18px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-left: 20px;
+  padding: 10px;
+  
+}
+.woodencourts {
+  position: sticky;
+  border: black 1px solid;
+  border-radius: 5px;
+  margin: 10px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-left: 20px;
+  padding: 10px;
+}
+
+.booknow {
+  background-color: white;
+  position: sticky;
+  color: black;
+  border-radius: 5px;
+  margin: 10px;
+  width: 44%;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: lighter;
+  margin-left: 20px;
+  padding: 10px;
+}
+
+.locations {
+  border: 2px solid rgb(209, 209, 209);
+  text-align: center;
+  padding: 5px;
+  margin-top: 10px;
+}
+
 section {
 padding: 50px;
 text-align: center;
@@ -156,25 +209,22 @@ background-color: #e53935;
 
 
 .excelsport {
-  margin-top: 10px;
-  margin-bottom: 25px;
   background-color: black;        
   border: 2px solid black;
   height: 600px;
   width: 400px;
-  padding: 10px;
   color: white;
   font-size: 65px;
   border-radius: 7px;
   margin-left: 20px;
   padding-left: 12px;
-  padding-bottom: 10px;
   font-family: 'Times New Roman', Times, serif;
   float: left;
+  margin-bottom: 16px;
 }
 
 .register {
-  background-color: orange;
+  background-color: black;
   border: 1px solid orange;
   border-radius: 5px;
   text-align: center;
@@ -188,7 +238,7 @@ background-color: #e53935;
 
 .register:hover {
   background-color: darkorange;
-  border: 2px solid yellow;
+  border: 2px solid rgb(248, 178, 14);
 }
 
 .register:active {
@@ -196,8 +246,91 @@ background-color: darkorange;
 box-shadow: 0 5px #666;
 transform: translateY(4px);
 }
+
+.improve {
+  background-color: black;
+  color: white;
+  border: black 2px solid;
+  border-radius: 5px;
+  height: 670px;
+  width: 100%;
+}
+
+.improveskills {
+  padding: 20px;
+  margin: 25px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 70px;
+  float: left;
+  width: 500px;
+  height: 100px;
+}
+
+.improveblocks {
+  background-color: black;
+  border: orange 1px solid;
+  border-radius: 4px;
+  color: white;
+  margin: 22px;
+  margin-top: 100px;
+  padding: 10px;
+  height: 250px;
+  width: 225px;
+  float: left;
+}
+
+.knowmore {
+  padding: 30px;
+  margin: 35px;
+
+}
+
+.knowmoreprograms {
+  border: orange 1px solid;
+  border-radius: 5px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+  margin-top: 20px;
+  margin-left: 450px;
+  margin-right: 50px;
+}
+.knowmoreprograms:hover {
+  background-color: darkorange;
+  border: 2px solid rgb(248, 178, 14);
+}
+.knowmoreprograms:active {
+  background-color: darkorange;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  }
+
+.bookcourt {
+  background-color: white;
+  border: 1px solid orange;
+  border-radius: 5px;
+  text-align: center;
+  color: black;
+  height: 50px;
+  width: 500px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+}
+.bookcourt:hover {
+  background-color: darkorange;
+  border: 2px solid rgb(248, 178, 14);
+}
+.bookcourt:active {
+  background-color: darkorange;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  }
+
 div.scroll-container {
-background-color: white;
+background-color: black;
 overflow: auto;
 white-space: nowrap;
 padding: 10px;
@@ -248,3 +381,5 @@ ul {
   display: inline-flex;
   vertical-align: top;
 }
+
+  
