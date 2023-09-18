@@ -2,20 +2,258 @@
 <html>
 <head>    
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="styles.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <style type="text/css">
+  <title>About us</title>
+  <script>
+    // Function to check if an element is in the viewport
+    function isElementInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
 
+    // Function to handle scroll events and trigger animations
+    function handleScrollAnimations() {
+      const animatedCards = document.querySelectorAll('.animated-card');
+      const animatedTexts = document.querySelectorAll('.animated-text');
 
-</style>    
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <title>About Us</title>
+      animatedCards.forEach((card) => {
+        if (isElementInViewport(card)) {
+          card.classList.add('slideInUp-animation');
+        } else {
+          card.classList.remove('slideInUp-animation');
+        }
+      });
+
+      animatedTexts.forEach((text) => {
+        if (isElementInViewport(text)) {
+          text.classList.add('slideInRight-animation');
+        } else {
+          text.classList.remove('slideInRight-animation');
+        }
+      });
+    }
+
+    // Event listener to handle scroll events
+    window.addEventListener('scroll', handleScrollAnimations);
+
+    // Initial check on page load
+    window.addEventListener('load', handleScrollAnimations);
+  </script>
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+      body {
+  font-family: 'Helvetica', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+header {
+  background-color: #FF5722; /* Orange color */
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  height: 400px;
+  width: 500px;
+}
+
+.about-text {
+  flex: 1;
+  padding: 0 20px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+p {
+  line-height: 1.8;
+}
+
+ul {
+  margin-left: 20px;
+  list-style-type: disc;
+}
+
+/* Add styles for the "Our Coaching Programs" section */
+.coaching-program-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.coaching-program-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  text-align: center;
+}
+
+.coaching-program-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.coaching-program-card h2 {
+  color: #FF5722; /* Orange color */
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.coaching-program-card p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* Add styles for the "Meet Our Expert Coaches" section */
+.coach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.coach-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  text-align: center;
+}
+
+.coach-card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.coach-card h2 {
+  color: #FF5722; /* Orange color */
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.coach-card p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+blockquote {
+  font-style: italic;
+  border-left: 4px solid #333;
+  padding-left: 20px;
+  margin: 20px 0;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Animation */
+@keyframes slideInUp {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animated-card {
+  animation: slideInUp 1s ease-in-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animated-text {
+  animation: slideInRight 1s ease-in-out;
+}
+
+/* Custom button styles */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Green color */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #45a049; /* Darker green color */
+}
+
+
+  </style>
 </head>
 <body>
-    <div id="ribbon"><font style="color: orange" > Aika </font> <font style="color: white;">Badminton</font> <font style="color: green;">Academy</font>
+    <div id="ribbon"><img src="idfk1-removebg-preview_25x35_20x28.jpg"><font style="color: orange;"> Aika </font> <font style="color: white;">Badminton</font> <font style="color: green;">Academy</font>
         <button  class="signupin right-aligned" >Sign Up</button>
         <button class="right-aligned signupin">Sign In</button>
+        <img src="shapeshifters_108x24_2_125x28.jpg" class="right-aligned shapeshifters" style="margin-top: 0.1px;">
     </div>
 
  <div>
@@ -23,23 +261,122 @@
         <ul>
           <li class="left-aligned"><a href="Aika.html" class="bordered-text">HOME</a></li>
           <li class="left-aligned"><a href="aboutus.html" class="bordered-text">ABOUT US</a></li>
-          <li class="left-aligned"><a href="locations.html" class="bordered-text">LOCATIONS</a></li>
-          <li class="left-aligned"><a href="services.html" class="bordered-text">SERVICES</a></li>
+          <li class="left-aligned"><a href="services.html" class="bordered-text">PROGRAMS</a></li>
           <li class="left-aligned"><a href="booking.html" class="bordered-text">BOOKING</a></li>
           <li class="left-aligned"><a href="contact.html" class="bordered-text">CONTACT</a></li>
-          <li class="right-aligned"><a href="twitter.html">
-            <img src="twitter.jpg">
+          <li class="right-aligned"><a href="whatsapp.html">
+            <img src="whatsapp_28x28.png">
           </a></li>
           <li class="right-aligned"><a href="insta.html">
-            <img src="insta.png">
+            <img src="instagram_1_1_28x28.png">
           </a></li>
-          <li class="right-aligned"><a href="fb.html">
-            <img src="fb.jpg">
+          <li class="right-aligned "><a href="fb.html">
+            <img src="facebook_28x28.png">
           </a></li>
 
         </ul>
       </nav>
   </div>
+  <body>
+    <div class="container">
+      <h1>About Us</h1>
+      <div class="about-content">
+        <div class="about-image">
+          <img src="scroll1.png" alt="Badminton Court">
+        </div>
+        <div class="about-text animated-text">
+          <h1>Experience the Timeless Appeal of Aika</h1>
+          <p>Welcome to Aika Badminton Academy, where passion meets performance. With over 2+ years of coaching excellence, we take pride in nurturing badminton enthusiasts of all ages and skill levels.</p>
+          <p>Our 5+ expert coaches are committed to providing personalized guidance, helping you unlock your full potential on the court. From our classic wooden badminton courts to our diverse coaching programs, we ensure an exceptional gameplay experience.</p>
+          <p>Join our academy and be part of the ever-growing community of 50+ happy students who have achieved remarkable progress and success in their badminton journey.</p>
+          <a href="#coaching-programs" class="btn">Discover Our Coaching Programs</a>
+        </div>
+      </div>
+      <div class="container">
+          <!-- ... Previous content ... -->
+      
+          <h1>Our Coaching Programs</h1>
+          <div class="coaching-program-grid">
+            <div class="coaching-program-card animated-card">
+              <img src="coaching.jpeg" alt="Beginner's Foundation Course">
+              <h2>Beginner's Foundation Course</h2>
+              <p>Designed for beginners to learn basic badminton techniques and rules.</p>
+              <p>Duration: 8 weeks</p>
+            </div>
+      
+            <div class="coaching-program-card animated-card">
+              <img src="coaching.jpeg" alt="Intermediate Skill Development">
+              <h2>Intermediate Skill Development</h2>
+              <p>For players seeking to improve their skills and gameplay strategies.</p>
+              <p>Duration: 10 weeks</p>
+            </div>
+      
+            <div class="coaching-program-card animated-card">
+              <img src="coaching.jpeg" alt="Advanced Tournament Preparation">
+              <h2>Advanced Tournament Preparation</h2>
+              <p>Intensive training for players aiming to compete in tournaments.</p>
+              <p>Duration: 12 weeks</p>
+            </div>
+      
+            <div class="coaching-program-card animated-card">
+              <img src="coaching.jpeg" alt="Private One-on-One Coaching">
+              <h2>Private One-on-One Coaching</h2>
+              <p>Personalized coaching tailored to individual player's needs and goals.</p>
+              <p>Duration: Flexible</p>
+            </div>
+      
+            <div class="coaching-program-card animated-card">
+              <img src="coaching.jpeg" alt="Group Training Sessions">
+              <h2>Group Training Sessions</h2>
+              <p>Dynamic and fun training in groups to enhance teamwork and skills.</p>
+              <p>Duration: Ongoing</p>
+            </div>
+          </div>
+        </div>
+  
+      <div class="container">
+          <!-- ... Previous content ... -->
+      
+          <h1>Meet Our Expert Coaches</h1>
+          
+      <hr style="border: 1px whitesmoke solid;">
+      <hr style="border: 1px whitesmoke solid;">
+          <div class="coach-card animated-card">
+            <img src="coach.jpeg" alt="Coach Emily Lee">
+            <h2>Coach Name1</h2>
+            <p>National Champion</p>
+            <p>Years of Experience: 10+</p>
+          </div>
+      <hr style="border: 1px whitesmoke solid;">
+      <hr style="border: 1px whitesmoke solid;">
+          <div class="coach-card animated-card">
+            <img src="coach.jpeg" alt="Coach David Chen">
+            <h2>Coach Name2</h2>
+            <p>Former World Ranked Player</p>
+            <p>Years of Experience: 15+</p>
+          </div>
+          <hr style="border: 1px whitesmoke solid;">
+          <hr style="border: 1px whitesmoke solid;">
+      
+          <div class="coach-card animated-card">
+            <img src="coach.jpeg" alt="Coach Sarah Wong">
+            <h2>Coach Name3</h2>
+            <p>Asian Games Gold Medalist</p>
+            <p>Years of Experience: 12+</p>
+          </div>
+        </div>
+        <hr style="border: 1px whitesmoke solid;">
+        <hr style="border: 1px whitesmoke solid;">
+      
+      <h1>What Our Students Say</h1>
+      <blockquote>
+        "Joining Aika Badminton Academy was a game-changer for me. The coaches' dedication and personalized attention helped me improve my technique significantly, and I've never enjoyed badminton more!" - John Smith
+      </blockquote>
+      <blockquote>
+        "I'm impressed by the top-notch facilities and coaching programs at Aika. As a parent, seeing my child's progress and passion for the sport grow has been truly rewarding." - Jane Doe
+      </blockquote>
+    </div>
+  
 
 
   <footer>
