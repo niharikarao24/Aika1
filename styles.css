@@ -1,0 +1,250 @@
+#ribbon {
+
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 97.55%;
+    background-color: #262626;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+    z-index: 9999;
+    font-family: cursive;
+    font-size: larger;
+  }
+  
+ 
+  .bordered-text:hover {
+    border: 1px solid rgb(23, 1, 1);
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgb(199, 194, 194);
+  }
+
+body, h1, h2, p, ul, li {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+width: 100%;
+font-family: Arial, sans-serif;
+background-color: white;
+}
+.signupin {
+  background-color: orange;
+  height: 35px;
+  width: 100px;
+  border: rgb(252, 176, 35) 2px solid;
+  border-radius: 5px;
+  color: white;
+  margin: 5px;
+  padding: 5px;
+  margin-top: -5px;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.signupin:hover {
+  background-color: rgb(206, 114, 2);
+}
+
+.signupin:active {
+  background-color: rgb(206, 114, 2);
+box-shadow: 0 2px #666;
+transform: translateY(4px);
+
+}
+
+header {
+background-color: #333;
+color: white;
+padding: 0px;
+}
+
+nav {
+  padding-top: 7px;
+}
+nav ul {
+list-style-type: none;
+}
+
+nav ul li {
+  color: blacks;
+  font-weight: bolder;
+  padding: 2px 7px;
+display: inline;
+margin-right: 20px;
+}
+
+nav ul li a {
+color: black;
+text-decoration: none;
+padding: 2px 7px;
+}
+
+#hero {
+  background-image: url('Aika1.png');
+  background-size: cover;
+color: #200404;
+padding: 100px;
+text-align: center;
+}
+
+
+#hero h1 {
+font-size: 48px;
+margin-bottom: 20px;
+font-weight: bold;
+}
+
+#hero p {
+font-size: 20px;
+margin-bottom: 30px;
+}
+
+.cta-button {
+display: inline-block;
+padding: 15px 30px;
+background-color: #f44336;
+color: #fff;
+text-decoration: none;
+font-size: 18px;
+border-radius: 5px;
+transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+background-color: #e53935;
+}
+
+
+section {
+padding: 50px;
+text-align: center;
+}
+
+section h2 {
+font-size: 36px;
+margin-bottom: 40px;
+font-weight: bold;
+}
+
+section p {
+font-size: 18px;
+line-height: 1.5;
+margin-bottom: 30px;
+}
+
+.learn-more {
+display: inline-block;
+padding: 12px 30px;
+background-color: #f44336;
+color: #fff;
+text-decoration: none;
+font-size: 16px;
+border-radius: 5px;
+transition: background-color 0.3s ease;
+}
+
+.learn-more:hover {
+background-color: #e53935;
+}
+
+
+
+.excelsport {
+  margin-top: 10px;
+  margin-bottom: 25px;
+  background-color: black;        
+  border: 2px solid black;
+  height: 600px;
+  width: 400px;
+  padding: 10px;
+  color: white;
+  font-size: 65px;
+  border-radius: 7px;
+  margin-left: 20px;
+  padding-left: 12px;
+  padding-bottom: 10px;
+  font-family: 'Times New Roman', Times, serif;
+  float: left;
+}
+
+.register {
+  background-color: orange;
+  border: 1px solid orange;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  height: 50px;
+  width: 250px;
+  margin-left: 75px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+}
+
+.register:hover {
+  background-color: darkorange;
+  border: 2px solid yellow;
+}
+
+.register:active {
+background-color: darkorange;
+box-shadow: 0 5px #666;
+transform: translateY(4px);
+}
+div.scroll-container {
+background-color: white;
+overflow: auto;
+white-space: nowrap;
+padding: 10px;
+width: 780px;
+height: 670px;
+float: right;
+border-radius: 7px;
+margin-right: 10px;
+}
+
+div.scroll-container img {
+padding: 0px;
+}
+
+footer {
+background-color: black;
+color: #fff;
+padding: 17px;
+text-align: center;
+position: relative;
+clear: both;
+margin-top: 10px;
+}
+.material-symbols-outlined {
+font-variation-settings:
+'FILL' 0,
+'wght' 400,
+'GRAD' 0,
+'opsz' 68
+}
+footer p {
+font-size: 14px;
+}
+ul {
+    overflow: hidden;
+    list-style-type: none;
+    padding: 10px;
+  }
+  
+  .left-aligned {
+    float: left;
+  }
+  
+  .right-aligned {
+    float: right;
+  }
+  .material-icons{
+  display: inline-flex;
+  vertical-align: top;
+}
